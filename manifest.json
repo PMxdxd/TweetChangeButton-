@@ -1,20 +1,23 @@
 {
-
-    "manifest_version": 2,
-    "name": "TweetChangeButton",
-    "version": "1.0",
-   
-    "description": "ツイートを好きな文字で変更できるボタンを追加します。",
-    
-    "icons": {
-      "48": "icons/tw.png"
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["*://*.twitter.com/*"],
-        "js": ["tw.js"]
-      }
-    ]
-  
-  }
+  "manifest_version": 2,
+  "name": "TweetChangeButton",
+  "version": "1.0",
+  "description": "ツイートを好きな文字で変更できるボタンを追加します。",
+  "icons": {
+    "48": "icons/tw.png"
+  },
+  "browser_action": {
+    "default_title": "test",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "tw.js"
+      ]
+    }
+  ]
+}
